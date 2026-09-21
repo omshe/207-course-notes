@@ -22,6 +22,12 @@ public class DigitSum {
      */
     public static int digitSum(int n) {
         // TODO: complete
-        return 0;
+        int a = Math.abs(n);
+        int sum = 0;
+        while (a > 0){
+            sum += a % 10;
+            a = a / 10;  // '/' automatically behaves like '//' in Python since a and 10 are integer types.
+        }
+        return sum;
     }
 }
